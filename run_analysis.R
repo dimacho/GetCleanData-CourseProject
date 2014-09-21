@@ -34,7 +34,7 @@ x.train <- cbind(x.train, read.table("train\\y_train.txt", col.names=c("activity
 #merging test and train sets
 data.all <- rbind(x.test, x.train)
 
-#get current columns
+#get current column names
 col.names <- colnames(data.all)
 
 #select columns only contains "Mean", "Std" (will be used for aggregations)
