@@ -6,13 +6,17 @@ X is created,as follows:
 * **binding with t(features) for the column names**
 * **binding with subjects**
 * **binding with activities**
+
 ## 2. Extracts only the measurements on the mean and standard deviation for each measurement.
 From the resulting matrix X containing information on 561 measurements I extract only those with mean() and sd() measurements
 “selection” is the variable which selects columns containing mean() and std(), excluding meanFreq()
 X_selected is the resulting matrix with only “means” and “std” measurement columns, subject and activities
+
 ## 3. Uses descriptive activity names to name the activities in the data set
 activities is the character vector which contains the names of activities extracted from "activity_labels.txt"
+
 ## 4. Appropriately labels the data set with descriptive activity names.
 The numbers in the “activities” column of X_selected are substituted with labels based on “activities” vector created in step 3
+
 ## 5. Appropriately labels the data set with descriptive activity names.
 I use melt and dcast functions of reshape2 librqry to structure X_selected. The new dataframe “X_mean” contains mean values, has  69 columns (66 measurements plus subject, activity_id and activity columns) 180 rows (30 subjects by 6 activities)
