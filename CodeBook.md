@@ -61,6 +61,6 @@ I use aggregate function to structure X_selected. The new dataframe “X_mean”
 
 #2. Data Sources
 
-
+The binding schema below:
 ![merging](https://coursera-forum-screenshots.s3.amazonaws.com/ab/a2776024af11e4a69d5576f8bc8459/Slide2.png)
 
