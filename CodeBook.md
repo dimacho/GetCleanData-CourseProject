@@ -2,8 +2,8 @@
 x_train, “y_train, subject_train, x_test, y_test, subject_test are dataframe variables used for extracting and storing data from respective six txt.files 
 X is the resulting matrix merging “test” and “train” files information from the above six datafames.  
 X is created,as follows:
-* **binding dataframes with measurements (x_test, x_train)**
-* **binding with t(features) for the column names**
+* **binding measurements (x_test, x_train)**
+* **binding with features for the column names**
 * **binding with subjects**
 * **binding with activities**
 
