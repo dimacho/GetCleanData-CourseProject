@@ -9,8 +9,8 @@ activity.names <- read.table("activity_labels.txt", col.names=c("activity_id", "
 feature.names <- read.table("features.txt", col.names=c("feature_id", "feature")) 
 
 # Fix the variable names
-feature.names$feature <- gsub("-mean", ".Mean", feature.names$feature) 
-feature.names$feature <- gsub("-std", ".Std", feature.names$feature ) 
+feature.names$feature <- gsub("-mean\\(\\)", ".Mean", feature.names$feature) 
+feature.names$feature <- gsub("-std\\(\\)", ".Std", feature.names$feature ) 
 feature.names$feature <- gsub("[()]", "", feature.names$feature ) 
 feature.names$feature <- gsub("[,]", "", feature.names$feature ) 
 feature.names$feature <- gsub("[-]", ".", feature.names$feature ) 
@@ -37,8 +37,8 @@ data.all <- rbind(x.test, x.train)
 #get current column names
 col.names <- colnames(data.all)
 
-#select columns only contains "Mean", "Std" (will be used for aggregations)
-col.names.aggr <- c(col.names[grep("Mean", col.names)], col.names[grep("Std", col.names)])
+#select columns only contains ".Mean", ".Std" (will be used for aggregations)
+col.names.aggr <- c(col.names[grep("\\.Mean", col.names)], col.names[grep("\\.Std", col.names)])
 # adding columns  "subject" and "activity_id"
 col.names.selected <- c(col.names.aggr, col.names[grep("subject", col.names)], col.names[grep("activity_id", col.names)])
 
