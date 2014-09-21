@@ -52,6 +52,6 @@ data.aggr <- aggregate(data.selected[,col.names.aggr],by=list(subject=data.selec
 data.tidy <- merge(activity.names,data.aggr,by.x="activity_id",by.y="activity_id",all=TRUE)
 
 #saving to file
-write.table(data.tidy,"./tidy_aggregated_data.txt")
+write.table(data.tidy,"./tidy_dataset.txt", row.name=FALSE)
 
 
