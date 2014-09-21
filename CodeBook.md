@@ -36,7 +36,7 @@ Mean value and Standard deviation of signal measurements collected from the acce
 -	fBodyGyroJerkMag: Fast Fourier Transform applied to gravity acceleration Jerk signal
 
 
-#2. Operations performed with the data sources
+#2. Performed Operations
 
 ### 1. Merges the training and the test sets to create one data set.
 x_train, “y_train, subject_train, x_test, y_test, subject_test are dataframe variables used for extracting and storing data from respective six txt.files 
@@ -56,7 +56,11 @@ X_selected is the resulting matrix with only “means” and “std” measureme
 activities is the character vector which contains the names of activities extracted from "activity_labels.txt"
 
 ### 4. Appropriately labels the data set with descriptive activity names.
-The numbers in the “activities” column of X_selected are substituted with labels based on “activities” vector created in step 3
+I use aggregate function to structure X_selected. The new dataframe “X_mean” contains mean values, has  69 columns (66 measurements plus subject, activity_id and activity columns) 180 rows (30 subjects by 6 activities)
 
-### 5. Appropriately labels the data set with descriptive activity names.
-I use melt and dcast functions of reshape2 librqry to structure X_selected. The new dataframe “X_mean” contains mean values, has  69 columns (66 measurements plus subject, activity_id and activity columns) 180 rows (30 subjects by 6 activities)
+
+#2. Data Sources
+
+
+![merging](https://coursera-forum-screenshots.s3.amazonaws.com/ab/a2776024af11e4a69d5576f8bc8459/Slide2.png)
+
